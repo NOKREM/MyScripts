@@ -8,7 +8,7 @@ function kodlama_cevir {
 }
 function ayristir {
 	grep '^[0-9][0-9][0-9][0-9]' | 
-	awk '{if($8!="-.-"){$7=""}else{print $8=""}$6="";print}' |
+	awk '{if($8!="-.-"){$7=""}else{$8=""}$6="";print}' |
 	sed -e 's/ (/(/g' \
 		-e 's/[A-Z] /&**/g' \
 		-e 's/ \*\*/_/g' \
